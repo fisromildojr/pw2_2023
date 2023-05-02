@@ -1,7 +1,18 @@
 <?php
-require "C:/Users/r_jrs/Desktop/pw2_2023/models/Produto.php";
+require "models\Produto.php";
+require "models\Conexao.php";
 class ProdutoController {
     public function findAll(){
+        
+        $conexao = Conexao::getInstance();
+
+        $stmt = $conexao->prepare("SELECT * FROM produto");
+
+        $stmt->execute();
+
+        $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $produtos;
         
     }
     public function save(Produto $produto){

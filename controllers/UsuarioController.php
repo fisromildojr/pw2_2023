@@ -1,5 +1,5 @@
 <?php
-require "../models/Usuario.php";
+require "..\models\Usuario.php";
 class UsuarioController {
     public function login($login, $senha){
     }

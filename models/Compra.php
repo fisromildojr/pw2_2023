@@ -1,5 +1,5 @@
 <?php
-require "C:/Users/r_jrs/Desktop/pw2_2023/models/Usuario.php";
+require "models\Usuario.php";
 
 class Compra {
     private $id;

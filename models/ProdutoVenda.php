@@ -1,6 +1,6 @@
 <?php
-require "C:/Users/r_jrs/Desktop/pw2_2023/models/Produto.php";
-require "C:/Users/r_jrs/Desktop/pw2_2023/models/Venda.php";
+require "models\Produto.php";
+require "models\Venda.php";
 
 class ProdutoVenda {
     private $id;

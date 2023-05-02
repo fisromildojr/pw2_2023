@@ -1,5 +1,5 @@
 <?php
-require "..\models\Usuario.php";
+require "\models\Usuario.php";
 class UsuarioController {
     public function login($login, $senha){
     }
@@ -17,5 +17,6 @@ class UsuarioController {
     public function delete(Usuario $usuario){
     }
     public function findById($id){
+
     }
 }

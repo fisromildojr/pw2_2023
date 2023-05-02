@@ -1,6 +1,6 @@
 <?php
-require "models\Marca.php";
-require "models\Categoria.php";
+require "Marca.php";
+require "Categoria.php";
 
 class Produto {
     private $id;
@@ -62,7 +62,7 @@ class Produto {
     /**
      * Get the value of percentual_lucro
      */ 
-    public function getPercentual_lucro()
+    public function getPercentualLucro()
     {
         return $this->percentual_lucro;
     }
@@ -72,7 +72,7 @@ class Produto {
      *
      * @return  self
      */ 
-    public function setPercentual_lucro($percentual_lucro)
+    public function setPercentualLucro($percentual_lucro)
     {
         $this->percentual_lucro = $percentual_lucro;
 

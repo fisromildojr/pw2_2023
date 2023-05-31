@@ -1,4 +1,5 @@
 <?php
+include_once("restrict.php");
 require_once "controllers/MarcaController.php";
 
 $controller = new MarcaController();

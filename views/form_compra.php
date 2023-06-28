@@ -6,6 +6,10 @@ require_once "controllers/ProdutoCompraController.php";
 require_once "models/ProdutoCompra.php";
 require_once "models/Produto.php";
 
+if (isset($_SESSION['mensagem'])) {
+	echo "<script>alert('" . $_SESSION['mensagem'] . "')</script>";
+	unset($_SESSION['mensagem']); // Limpar a variável de sessão após exibir o alerta
+}
 
 if (isset($_POST["finalizarCompra"])) {
 	unset($_SESSION["compra_id"]);
@@ -13,7 +17,10 @@ if (isset($_POST["finalizarCompra"])) {
 	exit();
 }
 
-if (!isset($_SESSION['compra_id'])) {
+
+if (isset($_GET['id'])) {
+	$_SESSION['compra_id'] = $_GET['id'];
+} else {
 	$compraController = new CompraController();
 	$compra = new Compra(null, null);
 	$compra = $compraController->save();
